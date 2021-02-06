@@ -10,12 +10,16 @@ public class LitecartPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    public static final String loginPageURL = "http://localhost/litecart/";
+    public static final String litecartPageURL = "http://localhost/litecart/";
 
     @FindBy(xpath = "//img[@alt = \"Yellow Duck\"]")
     private WebElement yellowDuck;
 
     public WebElement getYellowDuck(){
         return this.yellowDuck;
+    }
+
+    public void open() {
+        Driver.getDriver().get(litecartPageURL);
     }
 }
