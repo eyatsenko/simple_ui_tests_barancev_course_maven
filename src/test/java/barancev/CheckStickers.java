@@ -2,7 +2,6 @@ package barancev;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.Logger;
-import lombok.Getter;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,10 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import static driver.Driver.getDriver;
 
-@Getter
-
-public class CheckMenuItems {
-
+public class CheckStickers {
     final Logger log = Logger.getLogger(CheckMenuItems.class);
     private WebDriverWait wait= new WebDriverWait(getDriver(), 25);
     LoginPage loginPage = new LoginPage();

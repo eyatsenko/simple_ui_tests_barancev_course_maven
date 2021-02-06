@@ -15,6 +15,7 @@ public class DashboardPage {
     public static final String loginPageURL = "http://localhost/litecart/admin/";
     private String dashboardPageTitle = "Dashboard | My Store";
     private String appearancePageTitle = "Template | My Store";
+    private String logotypePageTitle = "Logotype | My Store";
     private String catalogPageTitle = "Catalog | My Store";
     private String countriesPageTitle = "Countries | My Store";
     private String currenciesPageTitle = "Currencies | My Store";
@@ -34,6 +35,10 @@ public class DashboardPage {
 
     @FindBy(xpath = "//li[@data-code=\"appearance\"]")
     private WebElement appearance;
+    @FindBy(xpath = "//li[@data-code=\"template\"]")
+    private WebElement template;
+    @FindBy(xpath = "//li[@data-code=\"logotype\"]")
+    private WebElement logotype;
     @FindBy(xpath = "//li[@data-code=\"catalog\"]")
     private WebElement catalog;
     @FindBy(xpath = "//li[@data-code=\"countries\"]")
@@ -69,6 +74,12 @@ public class DashboardPage {
 
     public WebElement getAppearance(){
         return this.appearance;
+    }
+    public WebElement getTemplate(){
+        return this.template;
+    }
+    public WebElement getLogotype(){
+        return this.logotype;
     }
     public WebElement getCatalog(){
         return this.catalog;
@@ -124,6 +135,9 @@ public class DashboardPage {
     }
     public String getAppearancePageTitle(){
         return this.appearancePageTitle;
+    }
+    public String getLogotypePageTitle(){
+        return this.logotypePageTitle;
     }
 
     public DashboardPage open() {
