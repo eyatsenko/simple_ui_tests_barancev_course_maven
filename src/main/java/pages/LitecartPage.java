@@ -15,6 +15,13 @@ public class LitecartPage {
     @FindBy(xpath = "//img[@alt = \"Yellow Duck\"]")
     private WebElement yellowDuck;
 
+    @FindBy(xpath = "//section[@id = \"box-campaign-products\"]")
+    private WebElement capmpaignSection;
+
+    public WebElement getCapmpaignSection(){
+        return this.capmpaignSection;
+    }
+
     public WebElement getYellowDuck(){
         return this.yellowDuck;
     }
