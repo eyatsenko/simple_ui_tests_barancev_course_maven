@@ -11,20 +11,35 @@ public class LitecartPage {
     }
 
     public static final String litecartPageURL = "http://localhost/litecart/";
+    private String createAccountPageTitle = "Create Account | My Store";
+    public String getCreateAccountPageTitle(){
+        return this.createAccountPageTitle;
+    }
 
     @FindBy(xpath = "//img[@alt = \"Yellow Duck\"]")
     private WebElement yellowDuck;
+    public WebElement getYellowDuck(){
+        return this.yellowDuck;
+    }
 
     @FindBy(xpath = "//section[@id = \"box-campaign-products\"]")
     private WebElement capmpaignSection;
-
     public WebElement getCapmpaignSection(){
         return this.capmpaignSection;
     }
 
-    public WebElement getYellowDuck(){
-        return this.yellowDuck;
+    @FindBy(xpath = "//li[@class = \"account dropdown\"]")
+    private WebElement signInButton;
+    public WebElement getSignInButton(){
+        return this.signInButton;
     }
+
+    @FindBy(xpath = "//a[@href = \"http://localhost/litecart/create_account\"]")
+    private WebElement linkForNewUsers;
+    public WebElement getLinkForNewUsers(){
+        return this.linkForNewUsers;
+    }
+
 
     public void open() {
         Driver.getDriver().get(litecartPageURL);
